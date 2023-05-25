@@ -1,0 +1,43 @@
+﻿<Window x:Name="main" x:Class="YourGradeScore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YourGradeScore"
+        mc:Ignorable="d"
+        Title="Grades Calculator" Height="450" Width="575" ResizeMode="NoResize" Icon="/3069198_cap_education_hat_school_icon.png">
+    <Grid AutomationProperties.HelpText=" 4 , h , h , 5 , 4 , 5 , 5 , 5 , 5 , 3 , 4 , 5 , + , h , h , 3 , 4 , 5 , 4" HorizontalAlignment="Center" Width="575" Margin="0,0,0,-6" Background="#FF75C1C7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="227*"/>
+            <ColumnDefinition Width="178*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="input" HorizontalAlignment="Left" Margin="29,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="544" Height="61" FontSize="22" FontFamily="Bahnschrift SemiBold" TextAlignment="Left" Text=" 4 , h , h , 5 , p , 5 , 5 , + , 5 , 3 , 4 " Background="White" GotFocus="input_GotFocus" Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Grid.ColumnSpan="2"/>
+        <Label x:Name="resultWin" Content="" HorizontalAlignment="Left" Margin="32,187,0,0" VerticalAlignment="Top" Width="63" Height="51" FontSize="36" FontFamily="Bahnschrift SemiBold" Background="#FF615555" Foreground="White" RenderTransformOrigin="0.5,0.5" BorderBrush="Black">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="button" Content="Calculate" HorizontalAlignment="Left" Margin="32,251,0,0" VerticalAlignment="Top" Click="button_Click" Height="31" Width="126" Background="#FF0BDC48" BorderBrush="Black" FontSize="18" FontFamily="Bahnschrift SemiBold"/>
+        <Label Content="Input your marks" HorizontalAlignment="Left" Margin="29,14,0,0" VerticalAlignment="Top" Background="#FFFFEA00" FontSize="18" FontFamily="Bahnschrift SemiBold" AutomationProperties.HelpText="" BorderBrush="Black" Height="31"/>
+        <Label Content="Average" HorizontalAlignment="Left" Margin="32,138,0,0" VerticalAlignment="Top" Background="#FFFFEA00" FontSize="18" FontFamily="Bahnschrift SemiBold" AutomationProperties.HelpText="" BorderBrush="Black" Height="31" Width="82"/>
+        <Label x:Name="gradeWin" Content="" HorizontalAlignment="Left" Margin="134,187,0,0" VerticalAlignment="Top" Width="63" Height="51" FontSize="36" FontFamily="Bahnschrift SemiBold" Background="#FF615555" Foreground="White" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Grade" HorizontalAlignment="Left" Margin="134,138,0,0" VerticalAlignment="Top" Background="#FFFFEA00" FontSize="18" FontFamily="Bahnschrift SemiBold" AutomationProperties.HelpText="" BorderBrush="Black" Height="31" Width="82"/>
+        <Button x:Name="pasteButton" Content="Paste" HorizontalAlignment="Left" Margin="190,20,0,0" VerticalAlignment="Top" Click="pasteButton_Click" Height="25" Width="74" Background="#FFDCA40B" BorderBrush="Black" FontSize="16" FontFamily="Bahnschrift SemiBold"/>
+        <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="284,20,0,0" VerticalAlignment="Top" Click="clearButton_Click" Height="25" Width="74" Background="#FFD24638" BorderBrush="Black" FontSize="16" FontFamily="Bahnschrift SemiBold" Grid.ColumnSpan="2"/>
+        <Label Content="Application was made by Nikita Kravtsov v0.1" HorizontalAlignment="Left" Margin="10,0,0,10" Width="257" FontFamily="Bahnschrift SemiBold" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
